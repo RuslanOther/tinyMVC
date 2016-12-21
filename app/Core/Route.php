@@ -5,7 +5,7 @@ namespace App\Core;
 class Route
 {
 
-	protected $controller = 'Welcome';
+	protected $controller = 'Home';
 	protected $action = 'index';
 	protected $variables = array();
 
@@ -25,7 +25,9 @@ class Route
 						}
 						break;
 					case '2':
-						$this->action = $routes[2];
+						if (!empty($routes[2])) {
+							$this->action = $routes[2];
+						}
 						break;
 					default:
 						$this->variables[]= $value;
@@ -34,11 +36,12 @@ class Route
 			}
 		}
 
+		$this->controller = ucfirst($this->controller);
 		$this->controller = 'App\Controllers\\' . $this->controller;
 
-		// echo $this->controller . '</br>';
-		// echo $this->action. '</br>';
-		// var_dump($this->variables);
+		echo $this->controller . '</br>';
+		echo $this->action. '</br>';
+		var_dump($this->variables);
 
 		if (class_exists($this->controller))
 		{

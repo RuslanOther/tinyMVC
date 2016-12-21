@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2",
+        "joshcam/mysqli-database-class": "dev-master"
     },
     "autoload": {
         "psr-4": {
