@@ -9,21 +9,12 @@ class Home extends Controller
   public function __construct()
   {
     parent::__construct();
-    $this->model = new Note();
+    $this->note = new Note();
+
   }
 
 	public function index()
 	{
-		$this->view->render('main_view.php', 'template_view.php', $this->model->get_notes() );
+		$this->view->render('main_view.php', 'template_view.php', $this->note->get_data());
 	}
-
-  public function set_data(){
-
-    $data['title'] = $_POST['title'];
-    $data['body'] = $_POST['body'];
-
-    $this->model->set_data($data);
-
-
-  }
 }

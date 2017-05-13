@@ -2,11 +2,11 @@
 <html>
 <head>
 <title></title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="http://tinymvc.dev/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery-1.11.0.min.js"></script>
+<script src="http://tinymvc.dev/js/jquery-1.11.0.min.js"></script>
 <!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="http://tinymvc.dev/css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

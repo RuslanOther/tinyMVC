@@ -35,17 +35,19 @@ class Route
 				}
 			}
 		}
-
+// 				echo $this->controller . '</br>';
+// 		echo $this->action. '</br>';
+// 		var_dump( $this->variables);
+// 		var_dump($routes);
+// die();
+//
 		$this->controller = ucfirst($this->controller);
 		$this->controller = 'App\Controllers\\' . $this->controller;
 
-		echo $this->controller . '</br>';
-		echo $this->action. '</br>';
-		var_dump($this->variables);
-
 		if (class_exists($this->controller))
 		{
-			$controller = new $this->controller($value);
+			$controller = new $this->controller();
+			$controller->params = $value;
 			$action =	$this->action;
 
 			if(method_exists($controller, $action))
@@ -67,5 +69,10 @@ class Route
 	{
 		$response = new View;
 		$response->render('404_view.php', 'template_view.php');
+  }
+
+  static function redirect()
+  {
+  	// @TODO
   }
 }

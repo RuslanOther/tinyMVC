@@ -7,6 +7,7 @@ class Controller {
 
 	public $model;
 	public $view;
+	public $params;
 
 	function __construct()
 	{

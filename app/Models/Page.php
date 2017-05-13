@@ -3,7 +3,7 @@ namespace App\Models;
 
 use App\Core\Model;
 
-class Note extends Model
+class Page extends Model
 {
-  // public $table = 'note';
+  public $table = 'page';
 }
